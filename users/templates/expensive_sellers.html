@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>پرتقال آنلاین | فروشنده گران‌قیمت</title>
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                direction: rtl;
+            }
+
+            .container {
+                width: 80%;
+                max-width: 800px;
+                margin: auto;
+                padding-top: 20px;
+            }
+
+            h1 {
+                color: #ff6600;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            .navbar {
+                background-color: #ff6600;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .navbar a {
+                color: white;
+                padding: 10px 15px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .navbar a:hover {
+                background-color: #ff4500;
+                color: #fff;
+            }
+
+            .card {
+                background: white;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                margin-bottom: 15px;
+            }
+
+            .footer {
+                text-align: center;
+                padding: 15px;
+                font-size: 0.9em;
+                color: #777;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'home_page' %}">صفحه اصلی</a>
+        <a href="{% url 'good_price_sellers' %}">فروشندگان خوش‌قیمت</a>
+        <a href="{% url 'expensive_sellers' %}">فروشندگان گران‌قیمت</a>
+    </div>
+    <div class="container">
+        <h1>فروشنده گران‌قیمت پرتقال‌آنلاین!</h1>
+        {% if sellers %}
+            <div class="card">
+                <p>فروشنده: <strong>{{ sellers.username }}</strong></p>
+                <p>قیمت: <strong>{{ sellers.max_price }} کوین</strong></p>
+            </div>
+        {% else %}
+            <div class="card">
+                <p>هیچ فروشنده‌ای با مشخصات مورد نظر پیدا نشد.</p>
+            </div>
+        {% endif %}
+    </div>
+    <div class="footer">پرتقال‌آنلاین &copy; 2024</div>
+</body>
+</html>
