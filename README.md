@@ -36,29 +36,29 @@ Each queryset has a corresponding view, simplifying the display of filtered data
 
 ## Setup Instructions
 
-1. Clone this repository:
+### 1. Clone this repository:
    ```bash
    git clone https://github.com/AfshinMoussavi/Orange-Seller.git
    ```
    
-2. Install dependencies:
+### 2. Install dependencies:
   ```bash
   pip install -r requirements.txt
   ```
 
-3. Apply migrations:
+### 3. Apply migrations:
   ```bash
   python manage.py migrate
   ```
 
-4. Create a superuser for accessing the Django admin:
+### 4. Create a superuser for accessing the Django admin:
   ```bash
   python manage.py createsuperuser
   ```
 
-5. Run the development server:
+### 5. Run the development server:
   ```bash
   python manage.py runserver
   ```
 
-6. Visit the local server at http://127.0.0.1:8000/ to explore Orange Seller.
+### 6. Visit the local server at http://127.0.0.1:8000/ to explore Orange Seller.
