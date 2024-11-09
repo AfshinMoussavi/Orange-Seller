@@ -38,7 +38,7 @@ Each queryset has a corresponding view, simplifying the display of filtered data
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/orange-seller.git
+   git clone https://github.com/AfshinMoussavi/Orange-Seller.git
    ```
    
 2. Install dependencies:
